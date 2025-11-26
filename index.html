@@ -5,23 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NeverStop · Jacob Thiel</title>
   <style>
-    body{background:#0f172a;color:#e2e8f0;font-family:system-ui,sans-serif;margin:0;padding:20px;text-align:center}
-    .title{font-size:4.5rem;font-weight:900;background:linear-gradient(90deg,#60a5fa,#3b82f6,#1d4ed8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
-    .s{color:#10b981}
-    img{max-width:100%;border-radius:50%;margin:20px 0}
-    .btn{background:#60a5fa;color:white;padding:1rem 2rem;border:none;border-radius:8px;font-size:1.2rem;margin:20px;cursor:pointer}
+    body {margin:0;background:#0f172a;color:#e2e8f0;font-family:system-ui,sans-serif;display:flex;flex-direction:column;min-height:100vh}
+    main {flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:2rem}
+    .title {font-size:5.5rem;font-weight:900;margin:0;background:linear-gradient(90deg,#60a5fa,#3b82f6,#1d4ed8);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:1}
+    .s {color:#10b981}
+    .tagline {font-size:1.8rem;font-weight:600;letter-spacing:1px;margin:1rem 0;color:#94a3b8}
+    .proof {font-size:1.4rem;margin:1.5rem 0;color:#cbd5e1}
+    .coming {font-size:1.3rem;margin:2rem 0;color:#94a3b8;max-width:700px;text-align:center;line-height:1.6}
+    .btn {background:#1e293b;border:2px solid #475569;color:white;padding:1.2rem 3rem;border-radius:12px;font-size:1.4rem;font-weight:700;cursor:pointer;transition:all 0.3s;box-shadow:0 8px 25px rgba(0,0,0,0.6)}
+    .btn:hover {background:#475569;transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,0.8)}
+    .support {margin-top:auto;padding:3rem 1rem;background:#020617;text-align:center}
+    .venmo {width:280px;height:280px;border-radius:16px;border:3px solid #334155}
+    hr {width:80%;border:none;border-top:2px solid #334155;margin:3rem 0}
+    @media (max-width:640px) {
+      .title {font-size:3.5rem}
+      .tagline {font-size:1.5rem}
+      .proof,.coming {font-size:1.2rem}
+      .btn {padding:1rem 2rem;font-size:1.3rem}
+    }
   </style>
 </head>
 <body>
-  <h1 class="title">Never<span class="s">S</span>top</h1>
-  <p style="font-size:1.4rem">JUST GO. ZERO EXCUSES.</p>
-  <img src="assets/images/profile.jpg" width="200" alt="Jacob Thiel">
-  <p>From 3:25 → 2:59 → sub-2:55<br>NeverStop Score™ · Thiel Score™ · The Overlay™</p>
-  <p><strong>Full pro dashboard with Strava + Garmin + Coros sync coming this week — $9/mo</strong></p>
-  <button class="btn" onclick="alert('Launching this week — DM @JacobThiel.running on Instagram to get in early')">Join Waitlist →</button>
-  <hr style="margin:40px 0;border:none;border-top:1px solid #334155">
-  <h2>Support the mission</h2>
-  <img src="assets/images/venmo-qr.png" width="300" alt="Venmo @Jacob-Thiel">
-  <p><strong>@Jacob-Thiel</strong></p>
+  <main>
+    <h1 class="title">Never<span class="s">S</span>top</h1>
+    <p class="tagline">JUST GO. ZERO EXCUSES.</p>
+    
+    <p class="proof">From 3:25 → 2:59 → sub-2:55 marathon</p>
+    <p class="proof">NeverStop Score™ · Thiel Score™ · The Overlay™</p>
+    
+    <p class="coming">
+      Full pro dashboard with Strava + Garmin + Coros sync<br>
+      Live scoring · The Overlay™ graph · Recovery zones<br>
+      Launching this week — $9/mo
+    </p>
+    
+    <button class="btn" onclick="alert('Launching this week — DM @JacobThiel.running on Instagram to get in early')">
+      Join Waitlist →
+    </button>
+  </main>
+
+  <hr>
+
+  <div class="support">
+    <h2 style="margin:0 0 2rem;color:#e2e8f0">Support the mission</h2>
+    <img src="assets/images/venmo-qr.png" alt="Venmo @Jacob-Thiel" class="venmo">
+    <p style="margin-top:1rem;font-size:1.4rem;font-weight:700;color:#94a3b8">@Jacob-Thiel</p>
+  </div>
 </body>
 </html>
